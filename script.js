@@ -62,16 +62,7 @@ let currentDate = new Date();
                 dayCell.classList.add('today');
                 dayCell.innerHTML = day  + '<br>'+d[new Date().getDay()];
             }
-            if (currentDate.getDate() === '25' && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-                wish.innerHTML = '<h2 class="text-white font-bold">🎉Merry🎅🎄Christmas🎉</h2>'
-                wishx.style = 'text-align: center;'
-                wishx.innerHTML = '<h2 class="text-white font-bold">🎉Merry🎅🎄Christmas🎉</h2>'
-            }// console.log(currentDate.getDate());
-            // }else if (currentDate.getDate() === 1 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-            //     wish.innerHTML = '<h2 class="text-white font-bold">🍾Happy🥂New🥳Year🎆</h2>'
-            //     wishx.style = 'text-align: center;'
-            //     wishx.innerHTML = '<h2 class="text-white font-bold">🍾Happy 🥂New 🥳Year🎆</h2>'
-            // }
+            
             
             calendarGridElement.appendChild(dayCell);
         }
@@ -206,35 +197,28 @@ let currentDate = new Date();
     setInterval(updateTime, 1000);
     updateTime();
 
+    if (currentDate.getDate() === 25) {
+        wish.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
+        wishx.style = 'display: initial; text-align: center;';
+        wishx.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
+        console.log(currentDate.getDate());
+    }else if (currentDate.getDate() === 1) {
+        wish.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy🥂New🥳Year🎆</h2>'
+        wishx.style = 'text-align: center;'
+        wishx.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy 🥂New 🥳Year🎆</h2>'
+    }
+
     const dev =  document.getElementById('dev')
     const nfd =  document.getElementById('nfd')
     const nfdC =  document.getElementById('nfdC')
-    const about =  document.getElementById('about')
-    const fabout =  document.getElementById('fabout')
     const clos =  document.getElementById('close')
-    const dwn =  document.getElementById('dwn')
-    const dwnl =  document.getElementById('dwnl')
-    const  nClose =  document.getElementById('nClose')
 
-    // closs 404
     function closs(){
         nfd.style = 'display: none;';
         console.log(nfd.style);
     }
     clos.addEventListener('click', closs);
 
-
-    // about page
-    function del() {
-        nfd.style = 'display: initial;';
-        console.log(nfd.classList);
-        nfd.classList.add = 'p-5 border';
-        nfdC.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600">Page could not be found. <br> Page is currently not available.</p>';
-        setTimeout(closs, 9000);
-    }
-    about.addEventListener('click', del);
-    fabout.addEventListener('click', del);
-    
     // ndembeze.com unavailable
     dev.addEventListener('click', e =>{
         nfd.style = 'display: initial;'
@@ -242,17 +226,3 @@ let currentDate = new Date();
         nfdC.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600"><b>ndembeze.com</b> could not be found. <br> <b>ndembeze.com</b> is currently not available.</p>';
         setTimeout(closs, 9000);
     })
-
-    // download notification
-    function dwnc(){
-        dwn.style = 'display: none;'
-    }
-    setTimeout(e => {
-        dwn.style = 'display: initial;';
-        dwn.classList.add = 'p-5 border';
-        dwnl.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & Kalenda.</h2> <br> <p class="text-[1rem] text-gray-600">Download the Mmuock Leteh Time and Kalenda now. <br> <span>Download Application <a href="./app-release.apk" download="mmuockTK" class="text-blue-700">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="text-blue-700">iPhone</a></span></p>';
-        setTimeout(dwnc, 10000);
-    }, 10000)
-
-    nClose.addEventListener('click', dwnc)
-
