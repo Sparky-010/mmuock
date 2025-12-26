@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mmuock Leteh | -akalenda</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./custom.css">
+    <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
+</head>
+
+<body class="overflow-x-hidden">
+    <header class="max-sm:sticky top-0 bg-green-300 z-30">
+        <div class="">
+            <h1 class="text-center font-extrabold text-4xl text-black pb-5" style="color: #fff;">Mmuock Leteh <br>
+            <span class="text-center font-extrabold text-4xl text-black pb-5 md:hidden" style="color: #fff;">Mmuock Leteh </span><br class="md:hidden"> <span class="text-2xl text-gray-600">Time & Calendar</span>
+            </h1>
+            <div class="head md:hidden">
+                <a href="./index.html">Njœé</a>
+                <a href="#">Kalenda</a>
+            </div>
+        </div>
+        <span class="md:hidden font-bold text-center block text-white " id="wish"></span>
+        <span class="max-sm:hidden font-bold text-center block text-white" id="wishx"></span>
+    </header>
+    <main class="">
+        <input type="checkbox" name="dev" id="dev" class="dev hidden">
+        <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[45%] bg-gray-200 text-center p-5 border z-20 " id="nfd">
+            <span class="absolute right-2.5 top-1 cursor-pointer text-[.7rem] text-black rounded-2xl px-1 bg-gray-400" id="close">close</span>
+            <div id="nfdC">
+                <h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600"><b>ndembeze.com</b> could not be found. <br> <b>ndembeze.com</b> is currently not available.</p>
+            </div>
+        </div>
+
+        <section class="md:h-[100vh] md:flex justify-evenly gap-5 flex-wrap my-5 pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
+            <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ákalenda Mmuock Leteh</h1>
+            <details class="md:hidden">
+                <summary class="text-center my-5">Mmuock days of the week in-full</summary>
+                    <div class="grid grid-cols-2 w-[100%] mx-auto px-5 mb-5 font-semibold md:hidden">
+                    <span class="bfont-bold border-b bg-gray-900 pl-2.5">Short</span> <span
+                        class="font-bold border-b bg-gray-900 pl-2.5"> Full form</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœê</span> <span
+                        class="border-b py-1 border-r pl-2.5"> Njœêngong</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Fa'à</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Fa'à</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Tél</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Télǎng</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Ngan</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Ngangà</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeq</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqgnúá</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeql</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqlěq</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœ</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Njœêlekœr̄</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeqń</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqńkœó</span>
+                </div>
+            </details>
+            <div class="text-center border rounded-2xl">
+                <div class="flex justify-between md:px-5 font-bold text-[1.2rem] md:ml-2.5">
+                    <h2 class="md:bg-gray-900 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month"></h2>
+                    <h2 class="bg-gray-500 px-5 py-2.5" id="yearFig"></h2>
+                    <h2 class="md:bg-gray-800 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month-year"></h2>
+                </div>
+                <div class="days grid md:gap-1.5 bg-green-400 md:p-1">
+
+                    <h2 class="border-l"><span class="md:hidden">Njœê</span> <span
+                            class="max-sm:hidden">Njœêngong</span></h2>
+                    <h2 class="border-l"><span class="md:hidden">Fa'à</span> <span class="max-sm:hidden">Fa'à</span>
+                    </h2>
+                    <h2 class="border-l"><span class="md:hidden">Tél</span> <span class="max-sm:hidden">Télǎng</span>
+                    </h2>
+                    <h2 class="border-l bg-red-300"><span class="md:hidden">Ngan</span> <span
+                            class="max-sm:hidden">Ngangà</span></h2>
+                    <h2 class="border-l"><span class="md:hidden">Mbeq</span> <span class="max-sm:hidden">Mbeqgnúá</span>
+                    </h2>
+                    <h2 class="border-l"><span class="md:hidden">Mbeql</span> <span class="max-sm:hidden">Mbeqlěq</span>
+                    </h2>
+                    <h2 class="border-l"><span class="md:hidden">Njœ</span> <span
+                            class="max-sm:hidden">Njœêlekœr̄</span></h2>
+                    <h2 class="border-l"><span class="md:hidden">Mbeqń</span> <span
+                            class="max-sm:hidden">Mbeqńkœó</span></h2>
+                </div>
+                <div class="grid grid-cols-8 gap-1.5" id="calendar-grid"></div>
+
+                <div class="flex justify-between p-2.5">
+                    <button class="bg-amber-400 py-1 px-3 font-bold text-white" id="prev-month-btn">Prev</button>
+                    <a href="./index.html" class="bg-blue-900 py-1 px-3 font-bold text-white"
+                        id="prev-month-btn">Today</a>
+                    <button class="" id="next-month-btn"></button>
+                    <!-- <button class="bg-green-400 py-1 px-3 font-bold text-white" id="next-month-btn">Next</button> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" bg-gray-900 text-gray-400 max-sm:px-5 text-center">
+        <div class="md:w-[45%] text-center mx-auto text-gray-400 flex md:gap-x-2.5 justify-center py-9 md:p-9 flex-wrap">
+            <i class="block w-full text-center mb-5">Visit <a href="http://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-[1rem]">mmuock.org</a> to learn more about the Mmuock the Language.</i>
+
+            <p>
+                <a href="./index.html" class="md:hidden">Njœé</a>
+                <a href="#" class="md:hidden">Kalenda</a>
+                <a href="https://sparky-010.github.io/mmuockk/" target="_blank">Website</a>
+                <label for="dev" class="underline cursor-pointer">Developer</label>
+            </p>
+            <i class="block w-full mt-5 font-bold text-center">Sparky.dev... Dec, 2025</i>
+        </div>
+    </footer>
+    <script src="./kal.js"></script>
+</body>
+</html>

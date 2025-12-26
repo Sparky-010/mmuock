@@ -82,9 +82,9 @@ let currentDate = new Date();
     renderCalendar(currentDate);
 
 //  time
-
+// Túh the night. ( lëtúh- by night, at night)
     function updateTime() {
-        const njie = ['Nzẹmzěm🌅', 'Tašig ndéndè☀️', 'Taŋšig🌤️', 'Mbodŋjœ̌🌤️', 'Tzẹtzem🌇', 'Létụ̌🌒']
+        const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodŋjœ̌🌤️', 'Ntsĕrnǳèm🌇', 'lëtúh🌒']
         const num = ['Tạ', 'Bèpíǽ', 'Bètàt', 'Lekuā', 'Bètå', 'ǹtùògò', 'šîâmbíǽ', 'Léfà', 'Lepụè', 'Léqèm', 'Tsôpmọ', 'Tsôppíǽ']
         const now = new Date();
         const r = document.getElementById('time')

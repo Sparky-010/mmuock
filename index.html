@@ -6,130 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mmuock Leteh | -akalenda</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./custom.css">
     <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
-    <style>
-        * {
-            transition: all 300ms ease-in-out;
-        }
-
-        #nfd{
-            display: none;
-        }
-
-        .dev:checked ~ #nfd{
-            display: initial;
-        }
-
-        .ctrls {
-            align-items: center;
-        }
-
-        section {
-            align-content: center;
-        }
-
-        .music {
-            align-items: center;
-        }
-
-        a {
-            text-decoration: underline;
-            align-items: center;
-        }
-
-        header a{
-            margin-bottom: 2px;
-            text-decoration: none;
-        }
-
-        header div{
-            word-spacing: 20px;
-            align-content: center;
-        }
-
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .day {
-            padding: 10px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1rem;
-            text-align: center;
-            /* padding: 5px 10px; */
-        }
-
-        .day:hover {
-            background: rgb(12, 13, 28);
-        }
-
-        .day.today {
-            background-color: #002fff;
-            color: #fff;
-            text-align: center;
-        }
-
-        .read {
-            color: rgb(201, 200, 200);
-        }
-
-        .period {
-            color: rgb(17, 205, 133);
-        }
-
-        l:hover {
-            background: #384142;
-            color: #fff;
-        }
-
-        .days {
-            grid-template-columns: repeat(8, .2fr);
-        }
-
-        footer p a:hover, header a:hover {
-            margin-left: 10px;
-            border-bottom: 1px solid;
-            color: white;
-        }
-
-        @media (max-width: 40rem) {
-            header a{
-                background: #b9f8cf;
-                padding-left: 10px;
-            }
-            header div{
-                word-spacing: 10px;
-            }
-
-            main{
-                display: block;
-            }
-
-            .day{
-                padding: 5px 0px;
-            }
-
-            #check:checked ~ div{
-                display: initial;
-                display: flex;
-                flex-direction: column;
-            }
-            footer div p{
-                word-spacing: 20px;
-            }
-        }
-    </style>
 </head>
 
 <body class="overflow-x-hidden">
     <header class="max-sm:sticky top-0 bg-green-300 z-30">
-        <h1 class="text-center font-extrabold text-4xl text-black pb-5" style="color: #fff;">Mmuock Leteh <br>
-            <span class="text-2xl text-gray-600">Mmuock Leteh <br>Time & Calendar
-        </h1>
+        <div class="">
+            <h1 class="text-center font-extrabold text-4xl text-black pb-5" style="color: #fff;">Mmuock Leteh <br>
+            <span class="text-center font-extrabold text-4xl text-black pb-5" style="color: #fff;"></span>Mmuock Leteh <br> <span class="text-2xl text-gray-600">Time & Calendar</span>
+            </h1>
+            <div class="head md:hidden">
+                <a href="#njœé">Njœé</a>
+                <a href="./kal.html">Kalenda</a>
+            </div>
+        </div>
         <span class="md:hidden font-bold text-center block text-white " id="wish"></span>
         <span class="max-sm:hidden font-bold text-center block text-white" id="wishx"></span>
     </header>
@@ -141,10 +32,10 @@
                 <h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600"><b>ndembeze.com</b> could not be found. <br> <b>ndembeze.com</b> is currently not available.</p>
             </div>
         </div>
-        <section class=" bg-gray-600 text-white max-md:h-[100vh]" id="Ŋjœ̌">
-            <div class="md:w-[80%] mx-auto max-sm:my-9">
+        <section class=" bg-gray-600 text-white md:h-[100vh] py-2" id="Ŋjœ̌">
+            <div class="md:w-[80%] mx-auto max-sm:my-5">
                 <!-- <h2>Mmuock Leteh Language,</h2> -->
-                <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ŋjœ̌ Mmuock Leteh</h1>
+                <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Njœé Mmuock Leteh</h1>
                 <div class="border rounded-2xl p-5 ">
                     <div class="bg-gray-500 p-5 rounded-2xl mb-2.5 text-center">
                         <h1 class="mb-2.5 text-[1.2rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
@@ -154,35 +45,38 @@
                         <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 text-gray-400 bg-gray-700 rounded-2xl"
                             id="read"></h1>
                     </div>
-                    <p class="grid grid-cols-2  md:w-[80%] rounded-2xl p-5 border mx-auto">
-                        <span class="font-bold border-b bg-gray-900 pl-2.5">Mmuock</span> 
-                        <span
-                            class="font-bold bg-gray-900 border-b border-l pl-2.5">English</span>
-                        <span class="font-bold border-b bg-gray-700 pl-2.5">Ŋjœ̌</span> 
-                        <span
-                            class="font-bold bg-gray-700 border-b border-l pl-2.5">Time</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Neq</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Sun</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Nzẹmzěm</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Morning</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Taŋšig</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Afternoon</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Tzẹtzem</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Evening</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Létụ̌</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Night</span>
-                    </p>
+                    <details>
+                        <summary class="text-center text-green-600">Click for Meaning of Mmuock in English</summary>
+                            <p class="grid grid-cols-2  md:w-[80%] rounded-2xl p-5 border mx-auto">
+                            <span class="font-bold border-b bg-gray-900 pl-2.5">Mmuock</span> 
+                            <span
+                                class="font-bold bg-gray-900 border-b border-l pl-2.5">English</span>
+                            <span class="font-bold border-b bg-gray-700 pl-2.5">Njœé</span> 
+                            <span
+                                class="font-bold bg-gray-700 border-b border-l pl-2.5">Time</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Nēq</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Sun</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Nzẹmzěm</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Morning</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Taŋšig</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Afternoon</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Tzẹtzem</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Evening</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Létụ̌</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Night</span>
+                        </p>
+                    </details>
                 </div>
             </div>
             <br><br>
         </section>
 
-        <section class="md:h-[100vh] md:flex justify-evenly gap-5 flex-wrap py-[100px] pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
+        <section class="max-sm:hidden md:h-[100%] md:flex justify-evenly gap-5 flex-wrap py-[10px] pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
             <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ákalenda Mmuock Leteh</h1>
             <div class="grid grid-cols-2 w-[100%] mx-auto px-5 mb-5 font-semibold md:hidden">
                 <span class="bfont-bold border-b bg-gray-900 pl-2.5">Short</span> <span
@@ -246,6 +140,8 @@
         <div class="md:w-[45%] text-center mx-auto text-gray-400 flex md:gap-x-2.5 justify-center py-9 md:p-9 flex-wrap">
             <i class="block w-full text-center mb-5">Visit <a href="http://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-[1rem]">mmuock.org</a> to learn more about the Mmuock the Language.</i>
             <p>
+                <a href="#njœé" class="md:hidden">Njœé</a>
+                <a href="./kal.html" class="md:hidden">Kalenda</a>
                 <a href="https://sparky-010.github.io/mmuockk/" target="_blank">Website</a>
                 <label for="dev" class="underline cursor-pointer">Developer</label>
             </p>
