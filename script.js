@@ -109,87 +109,89 @@ let currentDate = new Date();
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[4]}</span>`
         }else if (ampm === 'PM' && hours12 === '12') {
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[1]}</span>`
+        }else{
+            document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[5]}</span>`
         }
         // reading time
-        function Ntzẹmtzěm() {
+        function Ndzemèndzémé() {
             if (hours12 === '01' && ampm === 'AM') {
-                // console.log(`<b>Read as:</b> Beneq ${num[0]} ${njie[0]}`);
-                document.getElementById('read').innerHTML = `Read as: <i class="read"><u>${num[0]}</u> Neq ${njie[0]}</i>`
+                // console.log(`<b>Read as:</b> Benēq ${num[0]} ${njie[0]}`);
+                document.getElementById('read').innerHTML = `Read as: <i class="read"><u>${num[0]}</u> Nēq ${njie[0]}</i>`
             } else if (hours12 === '02' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[1]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[1]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '03' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[2]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[2]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '04' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[3]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[3]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '05' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[4]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[4]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '06' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[5]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[5]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '07' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[6]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[6]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '08' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[7]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[7]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '09' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[8]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[8]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '10' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[9]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[9]}</u> ${njie[0]}</i>`
             }
             else if (hours12 === '11' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[10]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[10]}</u> ${njie[0]}</i>`
             }else if (hours12 === '12' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[11]}</u> ${njie[1]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[11]}</u> ${njie[1]}</i>`
             }
         }
 
-        Ntzẹmtzěm();
-
-        function Taŋšig() {
+        Ndzemèndzémé();
+//Tàngexǐk
+        function Tàngexǐk() {
             if (hours12 === '01' && ampm === 'PM') {
-                // console.log(`<b>Read as:</b> Beneq ${num[0]} ${njie[0]}`);
-                document.getElementById('read').innerHTML = `Read as: <i class="read"><u>${num[0]}</u> Neq ${njie[2]}</i>`
+                // console.log(`<b>Read as:</b> Benēq ${num[0]} ${njie[0]}`);
+                document.getElementById('read').innerHTML = `Read as: <i class="read"><u>${num[0]}</u> Nēq ${njie[2]}</i>`
             } else if (hours12 === '02' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[1]}</u> ${njie[2]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[1]}</u> ${njie[2]}</i>`
             }
             else if (hours12 === '03' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[2]}</u> ${njie[3]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[2]}</u> ${njie[3]}</i>`
             }
             else if (hours12 === '04' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[3]}</u> ${njie[3]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[3]}</u> ${njie[3]}</i>`
             }
             else if (hours12 === '05' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[4]}</u> ${njie[4]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[4]}</u> ${njie[4]}</i>`
             }
             else if (hours12 === '06' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[5]}</u> ${njie[4]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[5]}</u> ${njie[4]}</i>`
             }
             else if (hours12 === '07' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[6]}</u> ${njie[5]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[6]}</u> ${njie[5]}</i>`
             }
             else if (hours12 === '08' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[7]}</u> ${njie[5]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[7]}</u> ${njie[5]}</i>`
             }
             else if (hours12 === '09' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[8]}</u> ${njie[5]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[8]}</u> ${njie[5]}</i>`
             }
             else if (hours12 === '10' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[9]}</u> ${njie[5]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[9]}</u> ${njie[5]}</i>`
             }
             else if (hours12 === '11' && ampm === 'PM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[10]}</u> ${njie[5]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[10]}</u> ${njie[5]}</i>`
             }else if (hours12 === '12' && ampm === 'AM') {
-                document.getElementById('read').innerHTML = `Read as: <i class="read">Beneq <u>${num[11]}</u> ${njie[0]}</i>`
+                document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[11]}</u> ${njie[0]}</i>`
             }
         }
 
-        Taŋšig();
+        Tàngexǐk();
 
         time.textContent = timeString;
     }

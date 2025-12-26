@@ -86,6 +86,26 @@ footer p a:hover, header a:hover {
     color: white;
 }
 
+
+@media (max-width: 1024px) {
+    main{
+        display: block;
+    }
+    
+    .time{
+        height: fit-content;
+    }
+    
+
+    .kalenda-det{
+        display: none;
+    }
+
+    .week-none{
+        display: none;
+    }
+}
+
 @media (max-width: 40rem) {
     header a{
         background: #b9f8cf;
