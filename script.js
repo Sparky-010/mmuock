@@ -107,8 +107,8 @@ let currentDate = new Date();
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[3]}</span>`
         }else if (ampm === 'PM' && hours12 > 4 && hours12 <= 6) {
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[4]}</span>`
-        }else {
-            document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[5]}</span>`
+        }else if (ampm === 'PM' && hours12 === '12') {
+            document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[1]}</span>`
         }
         // reading time
         function Ntzẹmtzěm() {
