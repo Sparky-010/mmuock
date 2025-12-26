@@ -84,7 +84,7 @@ let currentDate = new Date();
 //  time
 // Túh the night. ( lëtúh- by night, at night)
     function updateTime() {
-        const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodŋjœ̌🌤️', 'Ntsĕrnǳèm🌇', 'lëtúh🌒']
+        const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodnjœé🌤️', 'Ntsĕrnǳèm🌇', 'lëtúh🌒']
         const num = ['Tạ', 'Bèpíǽ', 'Bètàt', 'Lekuā', 'Bètå', 'ǹtùògò', 'šîâmbíǽ', 'Léfà', 'Lepụè', 'Léqèm', 'Tsôpmọ', 'Tsôppíǽ']
         const now = new Date();
         const r = document.getElementById('time')
