@@ -6,48 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mmuock Leteh | -akalenda</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./custom.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
 </head>
 
-<body class="overflow-x-hidden">
-    <header class="max-sm:sticky top-0 bg-green-300 z-30">
-        <div class="">
-            <h1 class="text-center font-extrabold text-4xl text-black pb-5" style="color: #fff;">Mmuock Leteh <br>
-            <span class="text-center font-extrabold text-4xl text-black pb-5" style="color: #fff;"></span>Mmuock Leteh <br> <span class="text-2xl text-gray-600">Time & Calendar</span>
-            </h1>
-            <div class="head text-center md:hidden">
-                <a href="#njœé">Njœé</a>
-                <a href="./kal.html">Kalenda</a>
+<body>
+    <main class="bg-gray-300 overflow-x-hidden">
+        <header class="max-sm:sticky top-0 bg-green-300 py-2.5 z-30">
+            <div class="flex justify-between px-2.5" style="align-items: center;">
+                <span class="text-center font-extrabold text-[1rem] text-white md:hidden">Mmuock <br>Leteh</span>
+                <span class="md:hidden font-bold bg-gray-600" id="wish"></span>
+                <label for="check" class="text-center bg-gray-600 px-2.5 rounded-2xl font-extrabold text-[1rem] text-white capitalize md:hidden">menu</label>
+            </div>
+            <h1 class="text-center font-extrabold text-4xl text-white mb-5 max-sm:hidden">Mmuock Leteh</h1>
+            <span class="max-sm:hidden font-bold" id="wishx"></span>
+            <input type="checkbox" id="check" class="hidden">
+            <div class="max-sm:hidden absolute text-center border md:border-t-0 bg-green-300 leading-9 text-blue-700 w-full mx-auto">
+                <a href="#Ŋjœ̌"><span class="max-sm:hidden">🕒</span>Njœé</a>
+                <a href="#kalenda"><span class="max-sm:hidden">🗓️</span>Kalenda</a>
+                <a href="#alpha"><span class="max-sm:hidden">🔠</span>Alphabet</a>
+                <a href="#board"><span class="max-sm:hidden">⌨</span>Typing_board</a>
+                <a href="#" id="about"><span class="max-sm:hidden">📑</span>About</a>
+                <a href="#music"><span class="max-sm:hidden">🎶</span>Music</a>
+            </div>
+        </header>
+        <!-- loading... -->
+        <div class="fixed top-[70px] md:top-0 w-full justify-self-center bg-gray-200 text-center pt-2.5 pb-1 px-2.5
+         border z-30 hidden" id="downloading">
+            <h3 class="text-center">Your App is under-way...</h3>
+            <div class="w-full rounded-2xl bg-gray-400 h-5">
+                <div class="loading rounded-2xl bg-green-400 h-full"></div>
             </div>
         </div>
-        <span class="md:hidden font-bold text-center block text-white " id="wish"></span>
-        <span class="max-sm:hidden font-bold text-center block text-white" id="wishx"></span>
-    </header>
-    <main class="grid grid-cols-2">
-        <input type="checkbox" name="dev" id="dev" class="dev hidden">
-        <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[45%] bg-gray-200 text-center p-5 border z-20 " id="nfd">
+        <!-- 404 -->
+        <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[40%] bg-gray-200 text-center p-5 border z-10 hidden" id="nfd">
             <span class="absolute right-2.5 top-1 cursor-pointer text-[.7rem] text-black rounded-2xl px-1 bg-gray-400" id="close">close</span>
-            <div id="nfdC">
-                <h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600"><b>ndembeze.com</b> could not be found. <br> <b>ndembeze.com</b> is currently not available.</p>
-            </div>
+            <div id="nfdC"></div>
         </div>
-        <section class="time bg-gray-600 text-white md:h-[100vh] py-2" id="Ŋjœ̌">
-            <div class="md:w-[80%] mx-auto max-sm:my-5">
-                <!-- <h2>Mmuock Leteh Language,</h2> -->
-                <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Njœé Mmuock Leteh</h1>
-                <div class="border rounded-2xl p-5 ">
-                    <div class="bg-gray-500 p-5 rounded-2xl mb-2.5 text-center">
-                        <h1 class="mb-2.5 text-[1.2rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
-                            id="am"></h1>
-                        <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
-                            id="time"></h1>
-                        <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 text-gray-400 bg-gray-700 rounded-2xl"
-                            id="read"></h1>
-                    </div>
-                    <details>
-                        <summary class="text-center text-green-600 cursor-pointer">Click for Meaning of Mmuock in English</summary>
-                            <p class="grid grid-cols-2  md:w-[80%] rounded-2xl p-5 border mx-auto">
+        <!-- download nft -->
+        <div class="fixed content-center w-full h-full left-0 top-0 bg-gray-200 text-center p-5 border z-40 hidden" id="dwn">
+            <div id="dwnl"> </div>
+            <br>
+            <span class="absolute top-5 right-5 justify-self-center cursor-pointer text-[1rem] text-black rounded-2xl px-5 bg-gray-400" id="nClose">close</span>
+        </div>
+
+        <section class="md:grid grid-cols-2">
+            <!-- time -->
+            <section class="pb-9 bg-gray-600 text-white  py-[75px]" id="Ŋjœ̌"><!--max-md:h-[100vh]-->
+                <div class="md:w-[90%] mx-auto max-sm:my-9">
+                    <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Njœé Mmuock Leteh</h1>
+                    <div class="border rounded-2xl p-5 ">
+                        <div class="bg-gray-500 p-5 rounded-2xl mb-2.5 text-center">
+                            <h1 class="mb-2.5 text-[1.2rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
+                                id="am"></h1>
+                            <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
+                                id="time"></h1>
+                            <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 text-gray-400 bg-gray-700 rounded-2xl"
+                                id="read"></h1>
+                        </div>
+                        <p class="grid grid-cols-2  md:w-[80%] rounded-2xl p-5 border mx-auto">
                             <span class="font-bold border-b bg-gray-900 pl-2.5">Mmuock</span> 
                             <span
                                 class="font-bold bg-gray-900 border-b border-l pl-2.5">English</span>
@@ -70,85 +87,255 @@
                             <span
                                 class=" border-b py-1 border-l pl-2.5">Night</span>
                         </p>
-                    </details>
+                    </div>
+                    <h3>Download Application <a href="./app-release.apk" class="text-blue-400" download="mmuockTK" id="andr">Android</a> or <a href="./ios_source.tar.gz" class="text-blue-400" download="mmuockTK" id="iph">iPhone</a></h3>
                 </div>
-            </div>
-            <br><br>
+            </section>
+
+            <section class="md:h-[100%] md:flex justify-evenly gap-5 flex-wrap  pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
+                <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ákalenda Mmuock Leteh</h1>
+                <div class="grid grid-cols-2 w-[90%] mx-auto px-5 mb-5 font-semibold md:hidden">
+                    <span class="bfont-bold border-b bg-gray-900 pl-2.5">Short</span> <span
+                        class="font-bold border-b bg-gray-900 pl-2.5"> Full form</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœê</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Njœêngong</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Fa'à</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Fa'à</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Tél</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Télǎng</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Ngan</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Ngangà</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeq</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqgnúá</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeql</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqlěq</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœ</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Njœêlekœr̄</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeqń</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqńkœó</span>
+                </div>
+                <div class="text-center border rounded-2xl">
+                    <div class="flex justify-between md:px-5 font-bold text-[1.2rem] md:ml-2.5">
+                        <h2 class="md:bg-gray-900 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month"></h2>
+                        <h2 class="bg-gray-500 px-5 py-2.5" id="yearFig"></h2>
+                        <h2 class="md:bg-gray-800 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month-year"></h2>
+                    </div>
+                    <div class="days grid md:gap-1.5 bg-green-400 md:p-1">
+
+                        <h2 class="border-l"><span class="md:hidden">Njœê</span> <span
+                                class="max-sm:hidden">Njœêngong</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Fa'à</span> <span class="max-sm:hidden">Fa'à</span>
+                        </h2>
+                        <h2 class="border-l"><span class="md:hidden">Tél</span> <span class="max-sm:hidden">Télǎng</span>
+                        </h2>
+                        <h2 class="border-l bg-red-300"><span class="md:hidden">Ngan</span> <span
+                                class="max-sm:hidden">Ngangà</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeq</span> <span class="max-sm:hidden">Mbeqgnúá</span>
+                        </h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeql</span> <span class="max-sm:hidden">Mbeqlěq</span>
+                        </h2>
+                        <h2 class="border-l"><span class="md:hidden">Njœ</span> <span
+                                class="max-sm:hidden">Njœêlekœr̄</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeqń</span> <span
+                                class="max-sm:hidden">Mbeqńkœó</span></h2>
+                    </div>
+                    <div class="grid grid-cols-8 gap-1.5" id="calendar-grid"></div>
+
+                    <div class="flex justify-between p-2.5">
+                        <button class="bg-amber-400 py-1 px-3 font-bold text-white" id="prev-month-btn">Prev</button>
+                        <a href="./index.html" class="bg-blue-900 py-1 px-3 font-bold text-white"
+                            id="prev-month-btn">Today</a>
+                        <button class="" id="next-month-btn"></button>
+                        <!-- <button class="bg-green-400 py-1 px-3 font-bold text-white" id="next-month-btn">Next</button> -->
+                    </div>
+                </div>
+                <h3>Download Application <a href="./app-release.apk" download="mmuockTK" class="text-blue-400" id="andro">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="text-blue-400" id="ipho">iPhone</a></h3>
+            </section>
         </section>
 
-        <section class="max-sm:hidden md:h-[100%] md:flex justify-evenly gap-5 flex-wrap py-[10px] pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
-            <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ákalenda Mmuock Leteh</h1>
-            <div class="kalenda-det grid grid-cols-2 w-[100%] mx-auto px-5 mb-5 font-semibold md:hidden">
-                <span class="bfont-bold border-b bg-gray-900 pl-2.5">Short</span> <span
-                    class="font-bold border-b bg-gray-900 pl-2.5"> Full form</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœê</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Njœêngong</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Fa'à</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Fa'à</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Tél</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Télǎng</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Ngan</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Ngangà</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeq</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Mbeqgnúá</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeql</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Mbeqlěq</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœ</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Njœêlekœr̄</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeqń</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Mbeqńkœó</span>
+        <!-- sample e.gs -->
+        <section class="p-5 h-[100vh] content-center justify-items-center">
+            <h1 class="text-2xl font-bold my-5 text-center">Example Phrases of Mmuock Time & Date.</h1>
+            <table class="border border-gray-300 max-sm:w-[95%]">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-400 p-2 font-bold md:text-2xl">English</th>
+                        <th class="border border-gray-400 p-2 font-bold md:text-2xl">Mmuock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-400 p-2">What day is it today?</td>
+                        <td class="border border-gray-400 p-2">Wei ǎ šœègnè?</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">Today is...</td>
+                        <td class="border border-gray-400 p-2">Wei ǎ...</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">What time is it?</td>
+                        <td class="border border-gray-400 p-2">Njœêe Fæ̣ǽ ká?</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">It is time.</td>
+                        <td class="border border-gray-400 p-2">Njœě kùọ̀.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">It is not yet time.</td>
+                        <td class="border border-gray-400 p-2">Njœě kǎ kuọò.</td>
+                    </tr>
+                        <td class="border border-gray-400 p-2">Got a second?</td>
+                        <td class="border border-gray-400 p-2">U waí munjœě?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="text-center py-[100px] bg-gray-400 px-2.5" id="alpha">
+            <h2 class="text-center text-3xl font-bold mb-2.5">Mmuock Leteh Alphabet</h2>
+            <h3 class="text-gray-500 font-bold text-[1rem]">This document gives an overview of all the letters of a
+                Mmuock alphabet.</h3>
+
+            <h3 class="text-gray-600 font-bold text-2xl mb-2.5">A Mmuock alphabet: The Letters</h3>
+            <div class="leading-14 font-bold grid grid-cols-4 md:text-3xl bg-gray-400 md:w-[80%] mx-auto border py-11 rounded-2xl"
+                style="word-spacing: 50px; align-content: center;">
+                <l>Aa</l>
+                <l>Bb</l>
+                <l>Cc</l>
+                <l>ǲǳ</l>
+                <l>Ee</l>
+                <l>Ff</l>
+                <l>Gg</l>
+                <l>Hh</l>
+                <l>Ii</l>
+                <l> Jj</l>
+                <l>Kk</l>
+                <l>Ll</l>
+                <l>Mm</l>
+                <l>Nn</l>
+                <l> Ññ</l>
+                <l>Gn(Ng)</l>
+                <l>gn(ng)</l>
+                <l>Ææ</l>
+                <l>Ir(ir)(ɛ)</l>
+                <l>Rr</l>
+                <l>Er(er)</l>
+                <l>Øø</l>
+                <l>Or</l>(or) <l>Šš</l>
+                <l>Oo</l>
+                <l>Œœ</l>
+                <l>Pp</l>
+                <l>Pf(pf)</l>
+                <l>Ow(ow)</l>
+                <l>Qq</l>
+                <l>Ur(ur)</l>
+
+                <l>Ar(ar)</l>
+                <l>Ss</l>
+                <l>Tt</l>
+                <l>Ts(ts)</l>
+                <l>Uu</l>
+
+                <l>Vv</l>
+                <l>Ww</l>
+                <l>Xx</l>
+                <l>Yy</l>
+                <l>Zz</l>
             </div>
-            <div class="text-center border rounded-2xl">
-                <div class="flex justify-between md:px-5 font-bold text-[1.2rem] md:ml-2.5">
-                    <h2 class="md:bg-gray-900 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month"></h2>
-                    <h2 class="bg-gray-500 px-5 py-2.5" id="yearFig"></h2>
-                    <h2 class="md:bg-gray-800 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month-year"></h2>
-                </div>
-                <div class="days grid md:gap-1.5 bg-green-400 md:p-1">
-
-                    <h2 class="border-l"><span class="week-none md:hidden">Njœê</span> <span
-                            class="max-sm:hidden">Njœêngong</span></h2>
-                    <h2 class="border-l"><span class="week-none md:hidden">Fa'à</span> <span class="max-sm:hidden">Fa'à</span>
-                    </h2>
-                    <h2 class="border-l"><span class="week-none md:hidden">Tél</span> <span class="max-sm:hidden">Télǎng</span>
-                    </h2>
-                    <h2 class="border-l bg-red-300"><span class="week-none md:hidden">Ngan</span> <span
-                            class="max-sm:hidden">Ngangà</span></h2>
-                    <h2 class="border-l"><span class="week-none md:hidden">Mbeq</span> <span class="max-sm:hidden">Mbeqgnúá</span>
-                    </h2>
-                    <h2 class="border-l"><span class="week-none md:hidden">Mbeql</span> <span class="max-sm:hidden">Mbeqlěq</span>
-                    </h2>
-                    <h2 class="border-l"><span class="week-none md:hidden">Njœ</span> <span
-                            class="max-sm:hidden">Njœêlekœr̄</span></h2>
-                    <h2 class="border-l"><span class="week-none md:hidden">Mbeqń</span> <span
-                            class="max-sm:hidden">Mbeqńkœó</span></h2>
-                </div>
-                <div class="grid grid-cols-8 gap-1.5" id="calendar-grid"></div>
-
-                <div class="flex justify-between p-2.5">
-                    <button class="bg-amber-400 py-1 px-3 font-bold text-white" id="prev-month-btn">Prev</button>
-                    <a href="./index.html" class="bg-blue-900 py-1 px-3 font-bold text-white"
-                        id="prev-month-btn">Today</a>
-                    <button class="" id="next-month-btn"></button>
-                    <!-- <button class="bg-green-400 py-1 px-3 font-bold text-white" id="next-month-btn">Next</button> -->
-                </div>
+            <div class="text-gray-300 text-[1rem] text-left leading-normal mt-5 md:w-[80%] mx-auto"
+                style="word-spacing: normal;">
+                <i>Source: <a href="https://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer"
+                        class="text-blue-600 text-[1rem]">mmuock.org</a></i><br>
+                <i class="mb-5"> You may want to look at sample phrases. <br> A wall chart is available for letters of
+                    the alphabet at <a href="https://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer"
+                        class="text-blue-600 text-[1rem]">mmuock.org</a></i>
             </div>
         </section>
+
+        <section class="py-5 text-center bg-gray-300" id="board">
+            <h3 class="text-3xl font-bold">Mmuock Leteh Language Typing board</h3>
+            <br>
+            <iframe src="https://mmuock.org/type/" frameborder="1" class="w-full p-2.5 border md:w-[80%] mx-auto h-[500px] rounded-2xl">hello</iframe>
+            <b>OR</b>
+            <p class="font-bold text-[1.3rem]">go to <a href="https://mmuock.org/type/" target="_blank"
+                    class="text-blue-500">mmuock.org</a></p>
+        </section>
+
+        <section class="pb-6 md:flex flex-wrap  justify-center h-[100vh] bg-amber-100" id="music">
+            <h2 class="text-center text-3xl font-bold mb-2.5 w-full">Music</h2>
+            <p class="text-gray-700 font-semibold text-center mb-9 w-full"> Music by Mmuock Leteh Musicians</p>
+
+            <br><br><br>
+            <h1 class="text-gray-700 font-semibold text-center">No music available yet.</h1>
+            <!-- <div class="music max-sm:flex flex-wrap justify-center mb-2 p-2.5 text-center">
+                <div>
+                    <audio width="500" height="200" controls>
+                        <source src="./music/ADA_Ehi_Settled.mp3" ,type=audio/mp3>
+                        </source>
+                    </audio>
+                </div>
+                <div>
+                    <span>description of the music</span> <br>
+                    <a href="./music/ADA_Ehi_Settled.mp3" class="text-blue-700 font-bold" download="m">Download</a>
+                </div>
+            </div>-->
+
+        </section>
+        <!-- <details class="suggest w-full content-center p-5">
+            <summary class="suggestion text-center cursor-pointer">Click <i class="text-blue-500 cursor-pointer">here</i> to make a Suggestion.</summary>
+
+            
+            <form action="" method="post" class="md:w-[40%] mx-auto content-center p-5 border">
+                <h2 class="font-bold text-center">Please fill the following to make a Suggestion.</h2>
+
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="e.g john@gmail.com" class="w-full border rounded-[10px] py-2.5 px-5">
+                <sup class="text-[.65rem]">Email required to update you when correction or recommendation have been made.</sup>
+
+                <select name="" id="opt" class="w-full border rounded-[10px] py-2.5 px-5 my-5">
+                    <option value="">Suggestion</option>
+                    <option value="">Spelling error</option>
+                    <option value="">Invalid link</option>
+                    <option value="">An Idea</option>
+                    <option value="">Other</option>
+                </select>
+                <br>
+                <label for="msg">Recommend something*</label>
+                <textarea name="msg" id="msg" cols="30" rows="5" placeholder="Input Suggestion..." class="w-full border rounded-2xl py-2.5 px-5"></textarea>
+                <div class="flex justify-between py-2.5 px-5">
+                    <button type="clear" class="py-1 px-4 rounded-[10px] underline hover:text-red-500 cursor-pointer">Clear</button>
+                    <input type="submit" class="py-1 px-4 rounded-[10px] bg-blue-500 font-bold text-white hover:bg-blue-400 cursor-pointer" value="Recommend" onclick="alert('this feature is unavailable for now')">
+                </div>
+            </form>
+        </details> -->
     </main>
 
-    <footer class=" bg-gray-900 text-gray-400 max-sm:px-5 text-center">
-        <div class="md:w-[45%] text-center mx-auto text-gray-400 flex md:gap-x-2.5 justify-center py-9 md:p-9 flex-wrap">
-            <i class="block w-full text-center">Visit <a href="https://sparky-010.github.io/mmuockk/" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-[1rem]">mmuock.org</a> to learn more about the Mmuock the Language.</i>
-            <i class="block w-full text-center mb-5">Visit <a href="http://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-[1rem]">Website</a> for more info and <b>suggestions.</b></i>
+
+    <footer class=" bg-gray-700 text-gray-400 max-sm:px-5 text-center">
+        <div class="md:w-[55%] text-center mx-auto text-gray-400 flex md:gap-x-2.5 justify-center py-9 md:p-9 flex-wrap">
+            <h4 class="block w-full mb-2.5 text-center font-bold md:text-[1.2rem] text-gray-300">Mmuock Leteh Kalenda
+                and Language Culture
+            </h4>
+            <i class="block w-full text-center mb-5">Visit <a href="http://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-[1rem]">mmuock.org</a> to learn more about the Mmuock the Language.</i>
             <p>
-                <a href="#njœé" class="md:hidden">Njœé</a>
-                <a href="./kal.html" class="md:hidden">Kalenda</a>
-                <a href="https://sparky-010.github.io/mmuockk/" target="_blank">Website</a>
-                <label for="dev" class="underline cursor-pointer">Developer</label>
+                <a href="#Ŋjœ̌">Ngjœ̌</a>
+                <a href="#kalenda">Kalenda</a>
+                <a href="#alpha">Alphabet</a>
+                <a href="#board">Typing_board</a>
+                <a href="#" id="fabout">About</a>
+                <a href="#" id="dev">Developer</a>
+                <a href="#music">Music</a>
+                <a href="#Contact">Contact</a>
             </p>
-            <i class="block w-full mt-5 font-bold text-center">Sparky.dev... Dec, 2025</i>
+
         </div>
+            <div class="pt-6 flex justify-between max-sm:px-12 gap-9 w-[20%] max-sm:w-full mx-auto" id="Contact">
+                <a href="https://wa.me/+237677191715" target="_blank" class=" flex justify-between gap-2.5 mr-5"><img src="./whatsapp.png" alt="whatsapp" width="30px">whatsapp</a>
+                <a href="tel: +237677191715" target="_blank" class=" flex justify-between gap-2.5"><img src="./call.png" alt="phone" width="30px">Phone</a>
+            </div>
+            <i class="block w-full mt-5 font-bold text-center">Sparky.dev... Dec, 2025</i>
     </footer>
     <script src="./script.js"></script>
 </body>
+
 </html>
