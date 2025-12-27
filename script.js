@@ -62,16 +62,7 @@ let currentDate = new Date();
                 dayCell.classList.add('today');
                 dayCell.innerHTML = day  + '<br>'+d[new Date().getDay()];
             }
-            if (currentDate.getDate() === 25 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-                wish.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
-                wishx.style = 'text-align: center;'
-                wishx.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
-                console.log(currentDate.getDate());
-            }else if (currentDate.getDate() === 1 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-                wish.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy🥂New🥳Year🎆</h2>'
-                wishx.style = 'text-align: center;'
-                wishx.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy 🥂New 🥳Year🎆</h2>'
-            }
+            
             
             calendarGridElement.appendChild(dayCell);
         }
@@ -93,7 +84,7 @@ let currentDate = new Date();
 //  time
 // Túh the night. ( lëtúh- by night, at night)
     function updateTime() {
-        const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodnjœé🌤️', 'Ntsĕrnǳèm🌇', 'Tùh🌒']
+        const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodnjœé🌤️', 'Ntsĕrnǳèm🌇', 'lëtúh🌒']
         const num = ['Tạ', 'Bèpíǽ', 'Bètàt', 'Lekuā', 'Bètå', 'ǹtùògò', 'šîâmbíǽ', 'Léfà', 'Lepụè', 'Léqèm', 'Tsôpmọ', 'Tsôppíǽ']
         const now = new Date();
         const r = document.getElementById('time')
@@ -121,9 +112,7 @@ let currentDate = new Date();
         }else{
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[5]}</span>`
         }
-
         // reading time
-        // -------------------------------Ndzemèndzémé
         function Ndzemèndzémé() {
             if (hours12 === '01' && ampm === 'AM') {
                 // console.log(`<b>Read as:</b> Benēq ${num[0]} ${njie[0]}`);
@@ -210,35 +199,28 @@ let currentDate = new Date();
     setInterval(updateTime, 1000);
     updateTime();
 
+    if (currentDate.getDate() === 25) {
+        wish.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
+        wishx.style = 'display: initial; text-align: center;';
+        wishx.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
+        console.log(currentDate.getDate());
+    }else if (currentDate.getDate() === 1) {
+        wish.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy🥂New🥳Year🎆</h2>'
+        wishx.style = 'text-align: center;'
+        wishx.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy 🥂New 🥳Year🎆</h2>'
+    }
+
     const dev =  document.getElementById('dev')
     const nfd =  document.getElementById('nfd')
     const nfdC =  document.getElementById('nfdC')
-    const about =  document.getElementById('about')
-    const fabout =  document.getElementById('fabout')
     const clos =  document.getElementById('close')
-    const dwn =  document.getElementById('dwn')
-    const dwnl =  document.getElementById('dwnl')
-    const  nClose =  document.getElementById('nClose')
 
-    // closs 404
     function closs(){
         nfd.style = 'display: none;';
         console.log(nfd.style);
     }
     clos.addEventListener('click', closs);
 
-
-    // about page
-    function del() {
-        nfd.style = 'display: initial;';
-        console.log(nfd.classList);
-        nfd.classList.add = 'p-5 border';
-        nfdC.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">About Page</h2> <br> <p class="text-[1rem] text-gray-600">This website was developed by <b>Ndembeze Kangmoh</b> to ease Time Reading as well as the Date and Day in the Mmuock Leteh Language.</p>';
-        setTimeout(closs, 9000);
-    }
-    about.addEventListener('click', del);
-    fabout.addEventListener('click', del);
-    
     // ndembeze.com unavailable
     dev.addEventListener('click', e =>{
         nfd.style = 'display: initial;'
@@ -246,36 +228,3 @@ let currentDate = new Date();
         nfdC.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600"><b>ndembeze.com</b> could not be found. <br> <b>ndembeze.com</b> is currently not available.</p>';
         setTimeout(closs, 9000);
     })
-
-    // download notification
-    function dwnc(){
-        dwn.style = 'display: none;'
-    }
-    setTimeout(e => {
-        dwn.style = 'display: initial;';
-        dwn.classList.add = 'p-5 border';
-        dwnl.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & Kalenda.</h2> <br> <p class="text-[1rem] text-gray-600">Download and install the Mmuock Leteh Time and Kalenda Application on <br> <br> <a href="./app-release.apk" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">iPhone</a></span></p>';
-        setTimeout(dwnc, 10000);
-    }, 10000)
-
-    nClose.addEventListener('click', dwnc)
-
-// download animation
-
-    const download = document.getElementById('downloading')
-    const andr = document.getElementById('andr')
-    const iph = document.getElementById('iph')
-    const ipho = document.getElementById('ipho')
-    const andro = document.getElementById('andro')
-
-    function downloading(){
-        download.style = 'display: initial;'
-        setTimeout(()=>{
-            download.style = 'display: none;'
-        },5000)
-    }
-
-    andr.addEventListener('click', downloading)
-    iph.addEventListener('click', downloading)
-    ipho.addEventListener('click', downloading)
-    andro.addEventListener('click', downloading)
