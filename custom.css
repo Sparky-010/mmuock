@@ -2,10 +2,6 @@
     transition: all 300ms ease-in-out;
 }
 
-body {
-    height: 100vh;
-}
-
 #nfd{
     display: none;
 }
@@ -148,5 +144,4 @@ footer p a:hover, header a:hover {
     footer div p{
         word-spacing: 20px;
     }
-
 }
