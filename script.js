@@ -228,17 +228,3 @@ dev.addEventListener('click', e =>{
     nfdC.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600"><b>ndembeze.com</b> could not be found. <br> <b>ndembeze.com</b> is currently not available.</p>';
     setTimeout(closs, 9000);
 })
-
-const website = document.querySelector('.website')
-// load on click
-function load() {
-    clos.style = 'display: none;'
-    nfd.style = 'display: initial; width: 400px;'
-    nfd.classList.add = 'p-5 border';
-    nfdC.innerHTML = `<h2 class="w-full mx-auto font-bold text-gray-600" style="text-align: center;"><img src="./fav.png" alt="" width="50px" style=" border-radius: 10px; justify-self: center; "></h2> <div class="round"></div> <i class="refresh text-[.7rem]" style="display: none;">taking too long? <a href="./index.html" class="text-blue-500">Refresh</a></i>`
-    setTimeout(()=>{
-        document.querySelector('.refresh').style = 'display: initial'
-    }, 4000)
-}
-
-website.addEventListener('click', load)

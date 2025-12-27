@@ -86,22 +86,6 @@ footer p a:hover, header a:hover {
     color: white;
 }
 
-.round{
-    height: 50px;
-    width: 50px;
-    margin: 10px auto;
-    border: 10px dotted;
-    border-radius: 50%;
-    animation: rnd 2s ease-in-out infinite alternate-reverse;
-}
-
-@keyframes rnd {
-    0%{}
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
 @media (max-width: 1024px) {
     main{
         display: block;
